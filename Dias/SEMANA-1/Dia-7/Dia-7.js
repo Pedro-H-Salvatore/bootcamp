@@ -1,11 +1,21 @@
 const filme = {
-    nome: Batman,
+    nome: "Batman",
     ano: 2012,
-    nota: 10,
+    notas: [9, 8, 10, 10, 10],
 
-    exibirInfo(){
-        console.log(`${this.nome} ${this.nota}`)
+    media() {
+        let soma = 0
+        let media = 0
+        for (const numero of (this.notas)) {
+            soma += numero
+            media = soma / this.notas.length
+        }
+        return media
+    },
+    exibirInfo() {
+        console.log(`${this.nome} ${filme.media()}`)
     }
-}
 
-console.log(filme.exibirInfo)
+}
+filme.exibirInfo()
+console.log(filme.media())
