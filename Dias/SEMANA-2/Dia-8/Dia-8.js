@@ -15,6 +15,7 @@ const saudacao = () => {
 }
 
 
+
 saudacao();
 
 const calcularMedia = (nota1, nota2) => {
