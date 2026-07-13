@@ -6,10 +6,10 @@ function App() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-blue-400">
       <div>
-        <h1>Faça sua pesquisa aqui</h1>
-        <p>algumas funções serão implantadas</p>
-        <Pesquisa titulo={"batman"} nota={10} />
-        <p>Exercício do dia 20/21</p>
+        <h1 className="text-white text-3xl">Faça sua pesquisa aqui</h1>
+        <p className="text-white text-sm">algumas funções serão implementadas</p>
+        <Pesquisa titulo="" nota={0}/>
+        <p className="text-white text-sm">Exercício do dia 20/21</p>
       </div>
 
     </div>
