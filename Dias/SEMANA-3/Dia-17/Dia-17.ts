@@ -20,14 +20,14 @@ const filme2: Filme = {
 
 
 
-const filmes: Filme[] = [filme1, filme2];
+const listaFilmes: Filme[] = [filme1, filme2];
 
 
-for(const filme of filmes){
+for(const filme of listaFilmes){
     console.log(`Nome: ${filme.nome}, Nota: ${filme.nota}`);
 }
 
-const filmeFormatado = filmes.map((filme) => {
+const filmeFormatado = listaFilmes.map((filme) => {
     return `Nome: ${filme.nome}, Descrição: ${filme.descricao || "Sem descrição"}, Nota: ${filme.nota}`;
 });
 
