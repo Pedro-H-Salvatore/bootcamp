@@ -3,7 +3,7 @@ const Footer = () => {
 
     return(
          <footer>
-          <div className="flex w-full min-h-40 items-center justify-between bg-zinc-950 text-zinc-700 px-4 py-3">
+          <div className="flex w-full min-h-40 items-center justify-between bg-zinc-900 text-zinc-700 px-4 py-3">
             <div className='items-end'>
               <p>&copy; Todos os direitos reservados CineExplorer</p>
             </div>
