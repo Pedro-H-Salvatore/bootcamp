@@ -1,10 +1,15 @@
-import { Link } from "react-router"
+import { Link, useNavigate } from "react-router"
 import Footer from "./components/footer"
 import imagemHero from "./assets/Imagem-hero.jpg"
 
 
 
 const Home = () => {
+   const navigate = useNavigate()
+   function botaoHome(){
+    navigate("/filme")
+   }
+
     return (
         <div className="bg-black font-bold min-h-screen">
             <header >
@@ -27,7 +32,7 @@ const Home = () => {
                         <h2 className="text-white text-5xl font-bold">
                             TODA HISTÓRIA COMEÇA COM UM PLAY
                         </h2>
-                        <button className="bg-red-600 text-white w-fit px-6 py-3 mt-6 rounded-lg hover:bg-red-700 hover:text-gray-200 transition-colors duration-300">
+                        <button onClick={botaoHome} className="bg-red-600 text-white w-fit px-6 py-3 mt-6 rounded-lg hover:bg-red-700 hover:text-gray-200 transition-colors duration-300">
                             EXPLORAR CATÁLOGO
                         </button>
 
