@@ -1,7 +1,9 @@
 import { Link } from "react-router"
-import imagemHeroFilme from './assets/Imagem-her0-filme.jpg'
+import imagemHeroFilme from './assets/Imagem-hero-filme.jpg'
 import Footer from "./components/footer"
 import Secao from "./components/secao"
+
+import CardsFilmes from "./components/cardsFilmes"
 
 const Filmes = () => {
     return (
@@ -22,22 +24,29 @@ const Filmes = () => {
                 <section className="relative w-full h-150 overflow-hidden">
                     <img src={imagemHeroFilme} alt="Imagem borrada com diversos filmes" className="w-full h-full object-cover"/>
                      <div className="absolute inset-0 flex flex-col justify-center items-center">
-                    <input className= "w-1/2 h-10 text-3xl  bg-white text-black" type="text" placeholder="Digite seu filme"/>
+                    <input className= "w-1/2 h-10 text-3xl rounded-md bg-white text-black" type="text" placeholder="Digite seu filme"/>
                 </div>
-                </section>
+                </section>  
                <section className="pt-2">
-                <Secao nome= "Ação"/>
+                <Secao title = "Ação">
+                  <CardsFilmes title = "Ação"/>
+                </Secao>
                </section>
-               <section className="pt-2">
-                <Secao nome= "Terror/Suspense"/>
+                 <section className="pt-2">
+                <Secao title = "Comédia">
+                  <CardsFilmes title = "Comédia"/>
+                </Secao>
                </section>
-               <section className="pt-2">
-                <Secao nome= "Comédia"/>
+                 <section className="pt-2">
+                <Secao title = "Terror/Suspense">
+                  <CardsFilmes title = "Terror/Suspense"/>
+                </Secao>
                </section>
-               <section className="pt-2">
-                <Secao nome= "Romance"/>
+              <section className="pt-2">
+                <Secao title = "Romance">
+                  <CardsFilmes title = "Romance"/>
+                </Secao>
                </section>
-
             </main>
             <Footer />
         </div>
