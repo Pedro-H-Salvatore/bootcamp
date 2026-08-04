@@ -1,17 +1,23 @@
-type filmeTitulo ={
-    nome: String
+import { type ReactNode } from "react"
+
+type childrenSecao = {
+    title: string
+    children: ReactNode
 }
 
-const Secao = (props: filmeTitulo) => {
-
-    return(
-        <div>
-            <section className="w-full h-60 bg-zinc-900">
-                <h2 className="text-xl text-white hover:text-red-600 transition-colors duration-300">{props.nome}</h2>
-
+const Secao = ({title,children}: childrenSecao) => {
+   
+       
+    
+    return( <div>
+            <section className="w-full bg-black pt-4">
+                <h2 className="text-xl pl-2 cursor-default  w-fit text-white hover:text-red-600 transition-colors duration-300">{title}</h2>
+              
+                {children}
             </section>
         </div>
     )
+    
 }
 
 export default Secao
