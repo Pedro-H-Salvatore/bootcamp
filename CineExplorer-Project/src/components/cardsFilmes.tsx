@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import type { TipoFilme } from "../types/tipoFilme";
 import ModalCardFilme from "./modalCardFilme";
+import type { RespostaTMDB } from "../types/respostaTMDB";
 
 const apiKey = import.meta.env.VITE_TMDB_API_KEY;
 
@@ -10,9 +11,7 @@ type SecaoFilmesProps = {
 
 
 
-type RespostaTMDB = {
-    results: TipoFilme[];
-};
+
 
 const CardsFilmes = ({ title }: SecaoFilmesProps) => {
     const [filmes, setFilmes] = useState<TipoFilme[]>([]);
