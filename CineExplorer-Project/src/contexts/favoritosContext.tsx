@@ -17,6 +17,11 @@ const FavoritoContext = createContext<TipoFavortioContext | undefined>(undefined
 
 export function FavoritosProvider({ children }: FavoritoProviderProps) {
   const [favoritos, setFavoritos] = useState<TipoFilme[]>(() => {
+
+    //localStorage -> é como se fosse um banco de dados porem do navegador ou seja, tudo que o usuario fizer, vai ser salvo localmente
+    //getItem -> pega o item do localStorage que possue o mesmo nome que esta sendo passado como parametro
+
+
     const favoritosSalvos = localStorage.getItem("cineexplorer:favoritos");
 
     if (!favoritosSalvos) {
@@ -24,6 +29,7 @@ export function FavoritosProvider({ children }: FavoritoProviderProps) {
     }
 
     try {
+      //JSON.parse -> transforma uma string em array
       return JSON.parse(favoritosSalvos) as TipoFilme[];
     } catch {
       return [];
@@ -33,6 +39,8 @@ export function FavoritosProvider({ children }: FavoritoProviderProps) {
   useEffect(() => {
     localStorage.setItem(
       "cineexplorer:favoritos",
+
+      //Json.stringify -> transforma uma array em estring
       JSON.stringify(favoritos),
     );
   }, [favoritos]);
