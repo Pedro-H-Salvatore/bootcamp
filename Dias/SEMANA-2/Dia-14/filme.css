@@ -1,0 +1,30 @@
+.containerFilme{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.filme{
+    background-color: rgb(24, 23, 23);
+    margin-top: 40px;
+    width: 50%;
+    border-radius: 5px;
+    
+}
+
+.filme p, h2{
+    margin: 10px;
+    text-align: justify;
+}
+.filme img {
+  display: block;
+  width: 220px;
+  margin: 0 auto;
+  border-radius: 12px;
+}
+
+.filme:hover{
+    background-color: rgb(92, 88, 88);
+    color: black;
+    transition: 0.5s;
+}

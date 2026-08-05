@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+.env 
+=======
 .env
 
 package-lock.json
@@ -5,3 +8,4 @@ package-lock.json
 node_modules
 .package
 package.json
+>>>>>>> Dias-Estudados
