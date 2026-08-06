@@ -100,14 +100,6 @@ CineExplorer-Project/
 └── vite.config.ts
 ```
 
-## Próximas melhorias
-
-- Salvar os favoritos no `localStorage`
-- Melhorar a responsividade em dispositivos móveis
-- Adicionar indicadores de carregamento e mensagens de erro na interface
-- Criar paginação para os resultados da pesquisa
-- Adicionar testes automatizados
-
 ## Autor
 
 Desenvolvido por **Pedro Henrique Salvatore**.
