@@ -19,7 +19,7 @@ const Contato = () => {
                     </div>
                 </nav>
             </header>
-            <main className='flex min-h-[42rem] w-full flex-1 flex-col bg-zinc-100 px-4 py-8 transition-colors duration-300 dark:bg-zinc-900 sm:px-6'>
+            <main className='flex min-h-168 w-full flex-1 flex-col bg-zinc-100 px-4 py-8 transition-colors duration-300 dark:bg-zinc-900 sm:px-6'>
                 <div className='flex flex-col items-center pt-4 text-center text-xl text-zinc-950 dark:text-white sm:pt-8 sm:text-2xl'>
                     <h2>Tem uma ideia, sugestão ou oportunidade? Vamos conversar.</h2>
                 </div>
