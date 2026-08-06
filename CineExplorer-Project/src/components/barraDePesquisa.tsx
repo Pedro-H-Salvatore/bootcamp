@@ -1,4 +1,5 @@
 
+
 import { useState } from "react"
 import type { RespostaTMDB } from "../types/respostaTMDB";
 import type { TipoFilme } from "../types/tipoFilme";
@@ -38,17 +39,17 @@ const BarraDePesquisa = () => {
     console.log(resultado)
 
     const filmesPesquisados = resultado.map((pesquisados) => (
-        <div className="flex justify-center items-center w-xs bg-zinc-700 rounded-sm inset-0 hover:bg-red-600 transition-colors duration-600" 
+        <div className="flex w-full items-center justify-center rounded-sm bg-zinc-200 transition-colors duration-600 hover:bg-red-600 dark:bg-zinc-700"
         key={pesquisados.id}>
             <div
                 onClick={() =>
                     setClicado(pesquisados)
                 }
-                className="cursor-pointer flex flex-col w-1/2 "
+                className="flex w-full cursor-pointer flex-col"
                 key={pesquisados.id}
             >
                 <img
-                    className="rounded-lg py-6"
+                    className="h-auto w-full rounded-lg p-2 sm:p-3"
                     src={`https://image.tmdb.org/t/p/w500${pesquisados.poster_path}`}
                     alt={`Capa do filme: ${pesquisados.title}`}
                 />
@@ -58,10 +59,10 @@ const BarraDePesquisa = () => {
 
 
     return (
-        <div className="flex flex-col items-center justify-center">
-            <div className="flex flex-row ">
+        <div className="flex w-full flex-col items-center justify-center px-4">
+            <div className="flex w-full max-w-3xl flex-row">
                 <form
-                    className="flex items-center gap-4"
+                    className="flex w-full flex-col items-stretch gap-3 sm:flex-row sm:items-center sm:gap-4"
                     onSubmit={(e) => {
                         e.preventDefault();
                         buscarFilme();
@@ -70,13 +71,13 @@ const BarraDePesquisa = () => {
                     <input
                         value={pesquisa}
                         onChange={(e) => setPesquisa(e.target.value)}
-                        className="h-10 w-md rounded-md bg-white text-3xl"
+                        className="h-10 w-full min-w-0 rounded-md bg-zinc-100 px-3 text-xl text-zinc-950 dark:bg-zinc-800 dark:text-white sm:flex-1 sm:text-3xl"
                         placeholder="Digite seu filme"
                     />
 
                     <button
                         type="submit"
-                        className="w-30 rounded-sm bg-white text-3xl transition-colors duration-300 hover:bg-red-600"
+                        className="w-full rounded-sm bg-zinc-200 px-4 py-1 text-xl text-zinc-950 transition-colors duration-300 hover:bg-red-600 dark:bg-zinc-800 dark:text-white sm:w-30 sm:text-3xl"
                     >
                         Buscar
                     </button>
@@ -84,7 +85,7 @@ const BarraDePesquisa = () => {
 
 
             </div>
-            <div className="flex w-full flex-row flex-wrap  justify-center gap-4 pt-5">
+            <div className="grid w-full grid-cols-2 gap-3 pt-5 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
                 {filmesPesquisados}
             </div>
             {clicado && (

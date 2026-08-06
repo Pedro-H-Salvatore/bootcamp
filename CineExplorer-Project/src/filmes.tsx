@@ -13,25 +13,25 @@ const Filmes = () => {
    }
 
     return (
-        <div className="bg-black font-bold min-h-screen w-full" >
+        <div className="min-h-screen w-full bg-white text-zinc-950 font-bold transition-colors duration-300 dark:bg-black dark:text-white" >
             <header >
-                <nav className='w-full p-3'>
-                    <h1 className=" text-3xl"><a className=' text-white'>CINE</a><a className='text-red-600'>EXPLORER</a></h1>
+                <nav className='w-full p-3 sm:p-4'>
+                    <h1 className="text-center text-2xl sm:text-left sm:text-3xl"><a className='text-zinc-950 dark:text-white'>CINE</a><a className='text-red-600'>EXPLORER</a></h1>
                     
-                    <div className='flex justify-center gap-6'>
-                         <Link className='text-white hover:text-red-600 transition-color duration-300 ' to={"/"}>Home</Link>
+                    <div className='flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-sm sm:gap-6 sm:text-base'>
+                         <Link className='text-zinc-950 hover:text-red-600 transition-color duration-300 dark:text-white' to={"/"}>Home</Link>
                         <Link className='text-red-600' to={"/filme"}>Filmes</Link>
-                        <Link className='text-white hover:text-red-600 transition-colors duration-300' to={"/buscar"}>Buscar</Link>
-                        <Link className='text-white hover:text-red-600 transition-colors duration-300' to={"/favoritos"}>Meus Favoritos</Link>
-                        <Link className='text-white hover:text-red-600 transition-colors duration-300' to={"/contato"}>Contato</Link>
+                        <Link className='text-zinc-950 hover:text-red-600 transition-colors duration-300 dark:text-white' to={"/buscar"}>Buscar</Link>
+                        <Link className='text-zinc-950 hover:text-red-600 transition-colors duration-300 dark:text-white' to={"/favoritos"}>Meus Favoritos</Link>
+                        <Link className='text-zinc-950 hover:text-red-600 transition-colors duration-300 dark:text-white' to={"/contato"}>Contato</Link>
                     </div>
                 </nav>
             </header>
             <main className="w-full">
-                <section className="relative w-full h-150 overflow-hidden">
+                <section className="relative h-112 w-full overflow-hidden sm:h-150">
                     <img src={imagemHeroFilme} alt="Imagem borrada com diversos filmes" className="w-full h-full object-cover"/>
-                     <div className="absolute inset-0 flex items-center  justify-center text-3xl">
-                      <h3 className="text-white">Não Achou seu filme? <button className="border border-solid rounded-lg px-2 hover:bg-red-600 hover:text-black transition-colors duration-300 cursor-pointer" onClick={botaoBuscar}>CLIQUE AQUI!</button> e procure pelo seu filme! </h3>
+                     <div className="absolute inset-0 flex items-center justify-center px-5 text-center text-lg sm:px-8 sm:text-2xl md:text-3xl">
+                      <h3 className="text-white">Não Achou seu filme? <button className="cursor-pointer rounded-lg border border-solid px-2 transition-colors duration-300 hover:bg-red-600 hover:text-black" onClick={botaoBuscar}>CLIQUE AQUI!</button> e procure pelo seu filme! </h3>
 
                 </div>
                 </section>  
