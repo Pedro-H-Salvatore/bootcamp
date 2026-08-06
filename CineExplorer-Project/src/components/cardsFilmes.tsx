@@ -68,18 +68,18 @@ const CardsFilmes = ({ title }: SecaoFilmesProps) => {
     const filmesEmCatalogo = filmes.map((filme) => (
         
         <div key={filme.id} 
-        onClick={() => setFilmeSelecionado(filme)} className="cursor-pointer">
+        onClick={() => setFilmeSelecionado(filme)} className="shrink-0 cursor-pointer">
             {filme.poster_path ? (
                 <img src={`https://image.tmdb.org/t/p/w500${filme.poster_path}`} 
                 alt={`Capa do filme ${filme.title}`} 
-                className="h-auto w-40 shrink-0 rounded-lg"/>) 
+                className="h-auto w-28 shrink-0 rounded-lg sm:w-32 md:w-40"/>)
                 : (<p className="text-zinc-950 dark:text-white">Imagem indisponível</p>)}
         </div>
     ));
 
     return (
         <div>
-            <div className="flex w-full justify-between gap-4 overflow-x-auto px-4 py-4">
+            <div className="flex w-full justify-start gap-3 overflow-x-auto px-3 py-4 sm:gap-4 sm:px-4 lg:justify-between">
                 {filmesEmCatalogo}
             </div>
             {filmeSelecionado && (
