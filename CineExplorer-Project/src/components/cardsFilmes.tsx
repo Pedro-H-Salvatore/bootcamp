@@ -73,7 +73,7 @@ const CardsFilmes = ({ title }: SecaoFilmesProps) => {
                 <img src={`https://image.tmdb.org/t/p/w500${filme.poster_path}`} 
                 alt={`Capa do filme ${filme.title}`} 
                 className="h-auto w-40 shrink-0 rounded-lg"/>) 
-                : (<p className="text-white">Imagem indisponível</p>)}
+                : (<p className="text-zinc-950 dark:text-white">Imagem indisponível</p>)}
         </div>
     ));
 

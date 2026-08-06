@@ -1,1 +1,17 @@
 @import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  @apply bg-white text-zinc-950 transition-colors duration-300;
+}
+
+.dark body {
+  @apply bg-black text-white;
+}

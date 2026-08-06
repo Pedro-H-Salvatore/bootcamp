@@ -1,4 +1,5 @@
 
+
 import { useState } from "react"
 import type { RespostaTMDB } from "../types/respostaTMDB";
 import type { TipoFilme } from "../types/tipoFilme";
@@ -38,7 +39,7 @@ const BarraDePesquisa = () => {
     console.log(resultado)
 
     const filmesPesquisados = resultado.map((pesquisados) => (
-        <div className="flex justify-center items-center w-xs bg-zinc-700 rounded-sm inset-0 hover:bg-red-600 transition-colors duration-600" 
+        <div className="flex justify-center items-center w-xs bg-zinc-200 rounded-sm inset-0 hover:bg-red-600 transition-colors duration-600 dark:bg-zinc-700"
         key={pesquisados.id}>
             <div
                 onClick={() =>
@@ -70,13 +71,13 @@ const BarraDePesquisa = () => {
                     <input
                         value={pesquisa}
                         onChange={(e) => setPesquisa(e.target.value)}
-                        className="h-10 w-md rounded-md bg-white text-3xl"
+                        className="h-10 w-md rounded-md bg-zinc-100 text-zinc-950 text-3xl dark:bg-zinc-800 dark:text-white"
                         placeholder="Digite seu filme"
                     />
 
                     <button
                         type="submit"
-                        className="w-30 rounded-sm bg-white text-3xl transition-colors duration-300 hover:bg-red-600"
+                        className="w-30 rounded-sm bg-zinc-200 text-zinc-950 text-3xl transition-colors duration-300 hover:bg-red-600 dark:bg-zinc-800 dark:text-white"
                     >
                         Buscar
                     </button>

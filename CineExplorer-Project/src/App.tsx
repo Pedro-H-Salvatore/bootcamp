@@ -5,12 +5,14 @@ import './global.css'
 import Home from './home'
 import Contato from './contato'
 import Buscar from './busca'
+import MudarTema from './components/botaoTema'
 
 function App() {
 
 
   return (
     <>
+       <MudarTema />
        <Routes>
                 <Route path='/' element={<Home/>} />
                 <Route path='/filme' element={<Filmes />} />

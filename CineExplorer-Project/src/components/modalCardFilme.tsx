@@ -24,7 +24,7 @@ const ModalCardFilme = (props: TipoModal) => {
 
     return (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 p-4">
-            <div className="w-full max-w-2xl rounded-xl bg-zinc-800 p-6 text-white">
+            <div className="w-full max-w-2xl rounded-xl bg-white p-6 text-zinc-950 transition-colors duration-300 dark:bg-zinc-800 dark:text-white">
                 <div className="flex justify-between">
                     
                     {favoritado ? 
